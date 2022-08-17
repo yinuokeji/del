@@ -1,0 +1,1 @@
+adb -host shell dbus-send --system --type=method_call --print-reply --dest=com.ivi.rtspplay2 /com/ivi/rtspplay2 

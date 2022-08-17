@@ -1,0 +1,39 @@
+﻿查看SOC版本：getprop ro.zxq.release.version
+查看mcu版本：sys-test --get-ver
+查看DSP版本：dsp_upgrade --get_ver
+刷完MCU后写 calculation值：写cal-test --hex 277,5f；回读 hutil_calibration.happ --read；reboot。
+抓log adb -host shell logctl >C:\Users\13758\Desktop\log\log_lirenqing\0412.txt。点击回车开始录log, 停止录取:ctrl+c。
+kill进程：taskkill /f /im adb.exe
+单core进入：echo -n fastboot | dd of=/dev/mmcblk0p10 bs=1 seek=132
+跳过登录界面：
+adb -host shell 
+adb_ivi shell 
+pkill startup
+IVI域下从地图界面回到卡片界面：sendlink page://login.ivi.com/loginservice -e ENGINELogin -d '{"accountName":"17000000000"}'
+
+OSS登录账号：
+大通账号：
+AccessKeyId: LTAI4FztFb31uEmXKDKH6vHZ
+AccessKeySecret: WhVhFImqZeMgJybsg67DuMh6ocPJs9
+区域(Region): oss-cn-shanghai
+授权路径(osspath): oss://os-customer/DaTong/
+
+延锋科技 账号：
+AccessKeyId: LTAI4Fzg1prp21M1YLt4kDXT
+AccessKeySecret: RQA8IgCwznPfvqPQRCtzOU1Z1fOJt7
+区域(Region): oss-cn-shanghai
+授权路径(osspath): oss://os-customer/YFTECH/
+
+强制进入recovery，进入shell之后先输入：hutil_calibration.happ -p -w boot-reason "recovery" 
+再输入重启。
+
+11.	KeyEmulation.sh 114 向下
+12.	KeyEmulation.sh 115 向上
+
+rvice: [SignalHandlerMIFAImpl.cpp:1508]
+
+rvice: [SignalHandlerMIFAImpl.cpp:1513]
+
+
+
+    
